@@ -13,17 +13,17 @@ func main() {
 		fmt.Println("need 3 arguments")
 		return
 	}
-	from, err := strconv.ParseInt(args[1], 10, 0)
+	from, err := strconv.ParseInt(args[0], 10, 0)
 	if err != nil {
 		fmt.Println(err)
 	}
 
-	target, err := strconv.ParseInt(args[0], int(from), 0)
+	to, err := strconv.ParseInt(args[1], 10, 0)
 	if err != nil {
 		fmt.Println(err)
 	}
 
-	to, err := strconv.ParseInt(args[2], 10, 0)
+	target, err := strconv.ParseInt(args[2], int(from), 0)
 	if err != nil {
 		fmt.Println(err)
 	}
